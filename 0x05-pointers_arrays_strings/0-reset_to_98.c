@@ -5,9 +5,8 @@
  * @n: variable integer
  * Return: 0 Sucess
  */
+
 void reset_to_98(int *n)
 {
-	int n;
-	n = 98;
-
+	*n = 98;
 }
