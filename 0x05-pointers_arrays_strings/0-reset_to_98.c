@@ -1,10 +1,10 @@
- #include "main.h"
-
+#include "main.h"
 /**
- * main - takes a pointer to an int as parameter and updates it points to to 98
- * @n: variable integer
- * Return: 0 Sucess
- */
+*  reset_to_98 - takes the pointer and updates the value
+*  @n: int to check
+*  Owned By Mola
+*  Return: 0 is success
+*/
 
 void reset_to_98(int *n)
 {
