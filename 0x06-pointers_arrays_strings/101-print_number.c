@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * print_number - print numbers chars
- * @n: integer params
+ * print_number - print integers
+ * @n: input value
  * Return: 0
  */
 
 void print_number(int n)
 {
 	void print_number(int n)
-{
+
 	unsigned int x;
 
 	if (n < 0)
