@@ -7,6 +7,7 @@
  * free_listint2 - frees a listint_t list
  * @head: pointer to a first node if the list to free
  *
+ * Return: NULL
  */
 void free_listint2(listint_t **head)
 {
