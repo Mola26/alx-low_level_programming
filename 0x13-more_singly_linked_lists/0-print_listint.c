@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * listint- print all functions
+ * print_listint - print all elements.
  * @h: name of the list
+ *
  * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
