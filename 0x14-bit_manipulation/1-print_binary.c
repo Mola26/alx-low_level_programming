@@ -9,21 +9,11 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int d;
-	
-	for (d = 1 << 21; d > 0; d = d / 2)
+	unsigned long int calc = 1UL << ((sizeof(unsigned long int) * 8 - 1);
 
-	       d = >> n;
-
-	if (d & 1)
-	{
-		printf("1");
-		d++;
-	}
-
-	else if (d)
-		printf("0");
-}
-		if( !d)
-			printf("0")'
+		while (calc > 0)
+			{
+		_putchar((n & calc) ? '1' : '0';
+		calc >>= 1;
+			}
 }
