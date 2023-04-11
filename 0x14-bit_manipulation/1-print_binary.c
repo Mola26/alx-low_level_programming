@@ -8,9 +8,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
+	int d, count = 0;
+	unsigned long int crnt;
+
+	for (d = 63; d >= 0; d--)
 	{
-		print_binary(n >> 1);
+		crnt = n >> d;
+
+		if (crnt & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
 	}
-	putchar((n & 1) ? '1' : '0');
+	if (!count)
+		_putchar('0')
 }
