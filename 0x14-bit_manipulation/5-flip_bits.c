@@ -2,8 +2,8 @@
 
 /**
  * flip_bits - returns the number of bits one needs to flip to get another
- * @n: name of the first number
- * @m: name of the second number
+ * @n: name of the first num
+ * @m: name of the second num
  *
  * Return: 0
  */
@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		total = calc >> d;
 		if (total & 1)
-			total++;
+			current++;
 	}
 
 	return (current);
