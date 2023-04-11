@@ -12,5 +12,5 @@ void print_binary(unsigned long int n)
 	{
 		print_binary(n >> 1);
 	}
-	std:: cout << (n & 1);
+	putchar((n & 1) ? '1' : '0');
 }
