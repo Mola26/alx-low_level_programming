@@ -3,8 +3,7 @@
 /**
  * clear_bit - sets the value of a bit to 0
  * @index: index starting from 0
- * @n: name of the list
- * @m: name of the list
+ * @n: pointer to the number
  *
  * Return: 0
  */
