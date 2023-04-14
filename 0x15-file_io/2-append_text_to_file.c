@@ -1,34 +1,41 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * append_text_to_file - function that appends text at the
- * of the file
- * @filename: the nameof the file
- * @text_content: the NULL terminated string
+ * _strlen length of a string
+ * @str:the pointer
  *
- * Return - -1 if file does not exists or 1 if exists
+ * Return: lengt
+ */
+size_t _strlen(char *str)
+{
+	size_t d;
+
+	for (d = 0; str[d];d++)
+		;
+	return (d);
+}
+
+/**
+ * append_text_to_file - appends text
+ * @filename: name of the file
+ * @text_content: name of the file
+ *
+ * Return: 1 if successful and -1 is failed
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int fn;
+	ssize_t len;
 
 	if (filename == NULL)
 		return (-1);
-
-	if (text_content != NULL)
-	{
-		for (len = 0; text_content[len];)
-			len++;
-	}
-
-	o = open(filename, O_WRONLY | O_APPEND);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
+	fn = open(filename, O_WRONLY | O_APPEND);
+	if (fn == -1)
 		return (-1);
-
-	close(o);
-
+	if (text_content != NULL)
+		len = write(fn, text_content, _strlen(text_content));
+	close(fn);
+	if (len == -1)
+		return (-1);
 	return (1);
 }
